@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+JS Browser Object Model
+</title>
+</head>
+<body>
+<script>
+
+
+
+
+function msg(){
+var name=confirm("are u sure");
+if(name==true){
+alert("ok");
+}
+else{
+alert("cancel");
+}
+}
+
+function msg1(){
+var name=prompt("enter the  name:");
+alert("i am"+name);
+document.writeln("I am "+name);
+}
+function msg2(){
+open("http://www.facebook.com");
+}
+function msg3(){
+setTimeout(
+function(){
+alert("welcome our web page after 2 seconds")
+},2000);
+}
+</script>
+<input type="button" value="click" onclick="msg()">
+<input type="button" value="click_prompt" onclick="msg1()">
+<input type="button" value="click_fun" onclick="msg2()">
+<input type="button" value="click_settimeout" onclick="msg3()">
+</body>
+</html>

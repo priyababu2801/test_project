@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>JSON File</title>
+</head>
+<body>
+<form>
+<h1 id="c"></h1>
+<textarea rows="10" name="check" id="check">{}</textarea>
+<br><br>
+<input type="button"  value="process" onclick="process()">
+<form>
+<script>
+function process(){
+var msg;
+var data=document.getElementById("check").value;
+if(data.length>=10){
+msg=document.writeln("more than 10 characters");
+}
+else{
+msg=document.writeln("less than 10 characters");
+}
+document.getElementById("c").innerHTML=msg;
+}
+</script>
+</body>
+</html>

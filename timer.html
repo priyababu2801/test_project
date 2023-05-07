@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+<h1>welcome</h1>
+<h1 id="mytime"></h1>
+<h2 id="countdown">10:00</h2>
+<script>
+var myvar=setInterval(mytime,1000);
+function mytime(){
+var d= new Date();
+var t=d.toLocaleTimeString();
+document.getElementById("mytime").innerHTML=t;
+}
+ 
+</script>
+<script>
+const startminutes=10;
+let time=startminutes*60;
+const countdown=document.getElementById("countdown");
+
+var t=setInterval(mytime1,1000);
+function mytime1(){
+const minutes=Math.floor(time/60);
+let seconds=time % 60;
+seconds=seconds<10?'0'+seconds:seconds;
+countdown=`${minutes}:${seconds}`;
+time--;
+
+
+}
+</script>
+</body>
+</html>

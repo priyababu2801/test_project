@@ -1,0 +1,82 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function printing(){
+var name=document.form1.name.value;
+document.writeln("Hii "+name);
+}
+function calculate(){
+var number=document.getElementById("number").value;
+document.writeln("cube value: "+(number*number*number))
+}
+function totalelement(){
+var gender=document.getElementsByName("gender");
+document.writeln("totalelement: "+gender.length);
+}
+function countparagraph(){
+var total=document.getElementsByTagName("p");
+document.writeln("total paragraph: "+total.length);
+}
+
+function place_form(){
+var flag=true;
+var data="Name:<input type='text'><br><br><br>email:<input type='text'><br><br>Address:<textarea></textarea><br><input type='button' value='comment'>";
+if(flag){
+document.getElementById("mylocation").innerHTML=data;
+flag=false;
+}
+else{
+document.getElementById("mylocation").innerHTML="";
+flag=true;
+}
+}
+function validate(){
+var msg;
+if(document.myform.pwd.value.length > 7){
+msg="password is strong";
+}
+else{
+msg="password is poor";
+}
+document.getElementById("mylocation1").innerText=msg;
+}
+</script>
+<form name="form1">
+Enter Name:<input type="text" name="name">
+<input type="button" value="print value" onclick="printing()">
+<br><br>
+<!--using dpcument.getElementById()-->
+Enter number:<input type="text" id="number">
+<input type="button" value="calculate" onclick="calculate()">
+<br><br>
+<!--using dpcument.getElementByName()-->
+
+Gender:
+male: <input type="radio" name="gender" value="male">
+female: <input type="radio" name="gender" value="female">
+<input type="button" value="elements calculate" onclick="totalelement()">
+<br><br>
+
+</form>
+<!--using dpcument.getElementTagName()-->
+
+<p>First paragraph</p>
+<p>First paragraph</p>
+<p>First paragraph</p>
+<p>First paragraph</p>
+<p>First paragraph</p>
+<input type="button" value="tag calculate" onclick="countparagraph()">
+<br><br>
+<form name="form2">
+<input type="button" value="place form" onclick="place_form()">
+<div id="mylocation"></div>
+<br><br>
+
+password:
+<input type="password" name="pwd" id="pwd" onkeyup="validate()">
+strength:
+<span id="mylocation1">no strength</span>
+</body>
+</html>

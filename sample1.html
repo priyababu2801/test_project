@@ -1,0 +1,66 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<style>
+div{
+height:200px;
+width:400px;
+background-color:red;
+color:white;
+border:3px solid black;
+}
+</style>
+<body>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("p").append("<b>appended text</b>.");
+});
+
+$("#btn2").click(function(){
+$("ol").append("<li>appended list</li>");
+});
+
+$("#btn7").click(function(){
+$("img").after("<b>after the image</b>");
+});
+
+$("#btn8").click(function(){
+$("img").before("<b>before the image</b>");
+});
+
+$("#btn3").click(function(){
+$("div").remove();
+});
+
+});
+</script>
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+
+<ol>
+<li>apple</li>
+<li>orange</li>
+<li>banana</li>
+</ol>
+
+<button id="btn1"> Append text</button>
+<button id="btn2"> Append list</button>
+<br>
+<br>
+<img src="first.jpeg" alt="The nature image" height="100px" width="100px"><br><br><br>
+<button id="btn7">After img</button>
+<button id="btn8">before img</button>
+<br><br><br>
+
+<div>
+<p>Html is used for create static webpage</p>
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+
+</div>
+<br><br>
+<button id="btn3">Remove the elements</button>
+</body>
+</html>

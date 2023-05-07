@@ -1,0 +1,103 @@
+<html>
+<head></head>
+<body>
+<h1 style="font-size:60px">Welcome </h1>
+<form>
+<input type="text" name="number" id="number"/>
+
+<input type="button" onclick="cube()" value="cube"/>
+
+</form>
+<script>
+function cube(){
+
+var number=document.getElementById("number").value;
+alert(number*number*number);
+}
+
+function totalelements()  
+{  
+var allgenders=document.getElementsByName("gender");  
+alert("Total Genders:"+allgenders.length);  
+} 
+function countpara(){  
+var totalpara=document.getElementsByTagName("p");  
+alert("total p tags are: "+totalpara.length);  
+} 
+var flag=true;
+function showcomment(){
+var data="Name<input type='text' name-'name' id='name'><br><br>Email<input type='text' name='mail' id='mail'><br><br><input type='button' value='comment'>";
+if(flag){
+document.getElementById("demo").innerHTML=data;
+flag = false;
+}
+else{
+document.getElementById("demo").innerHTML="";
+flag =true;
+}
+}
+function passwordcheck(){
+var msg;
+if(document.myform.pwd.value.length >7){
+msg="good";
+}
+else{
+msg="poor";
+}
+document.getElementById("demo1").innerText=msg;
+}
+
+</script>
+<!--password check-->
+<form name="myform">
+password: <input type="password" name="pwd" onkeyup="passwordcheck()"/>
+<span id="demo1">strength: </span>
+<input type="button" onclick="passwordcheck()" value="passwordcheck"/>
+</form>
+
+<!--show/hide form-->
+<p id="demo"></p>
+ <input type="button" onclick="showcomment()" value="writecomment"><br><br><br>
+
+
+<!--getElementByName() count -->
+<form>  
+Male:<input type="radio" name="gender" value="male">  
+Female:<input type="radio" name="gender" value="female">  
+  
+<input type="button" onclick="totalelements()" value="Total Genders">  
+</form>
+
+<!--getElementByTagName() count-->
+<p>This is a pragraph</p>  
+<p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+<p>Let's see the simple example</p>  
+<button onclick="countpara()">count paragraph</button> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<body onload="window.alert('page successfully loaded');">
+<!--onkeydown example-->
+<h2>Enter something here </h2>
+<input type="text" id="input1" onkeydown="keydownevent()"/>
+<br>
+
+<script>
+function keydownevent(){
+
+document.getElementById("input1");
+alert("pressed a key");
+}
+
+document.write("the page is loaded successfully");
+</script>
+</body>

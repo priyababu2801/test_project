@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>JS Events</title>
+</head>
+<body onload="window.alert('page successfully loaded');">
+<h2>Enter the value</h2>
+<input type="text" id="input1" onfocus="focusevent()">
+<br><br> 
+<input type="text" id="input2" onkeydown="keydownevent()">
+<script>
+document.write("the page is loaded successfully");
+function mouseoverevent(){
+alert("hello welcome");
+}
+function focusevent(){
+document.getElementById("input1").style.background="blue";
+}
+function keydownevent(){
+document.getElementById("input2");
+alert("pressed a key");
+}
+
+</script>
+<p onmouseover="mouseoverevent()">Keep cursor over the text</p>
+</body>
+</html>

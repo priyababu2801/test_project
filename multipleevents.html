@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Multiple events</title>
+</head>
+<body>
+<p>python is a programming language</p>
+<p>it is used to various applications</p>
+<button id="btn">click here</button>
+<p id="paragraph"></p>
+<p id="paragraph1"></p>
+<script>
+function msg(){
+alert("welcome");
+}
+function msg1(){
+document.getElementById("paragraph").innerHTML="html is used to create static web page";
+}
+function msg2(){
+document.getElementById("paragraph1").innerHTML="css used for designing purpose";
+}
+function msg4(){
+btn.style.width="200px";
+btn.style.height="100px";
+btn.style.background="blue";
+btn.style.color="white";
+
+}
+function msg5(){
+btn.style.width="";
+btn.style.height="";
+btn.style.background="";
+btn.style.color="";
+
+}
+var mybtn=document.getElementById("btn");
+mybtn.addEventListener("mouseover",msg4);
+mybtn.addEventListener("click",msg);
+mybtn.addEventListener("click",msg1);
+mybtn.addEventListener("click",msg2);
+mybtn.addEventListener("mouseout",msg5);
+
+
+</script>
+</body>
+</html>
